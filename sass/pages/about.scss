@@ -1,0 +1,131 @@
+@import "../helpers/global";
+@import "../helpers/mixins";
+@import "../helpers/grid";
+@import "../Componets/buttons";
+@import "../Layout/header";
+@import "../Layout/footer";
+@import "../helpers/variables";
+@import "../Layout/needPhotographyBeforeFooter";
+
+// Start Home Main Img
+.HomeMainImg {
+    min-width: auto;
+    min-height: calc(100vh - 87px);
+    overflow: hidden;
+    position: relative;
+    background-image: url("../../imgs/jeremy-bishop-5MvL55-rSvI-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .container 
+    .overlay {
+        @include overlay;
+        background:linear-gradient(to bottom, rgba(245, 246, 252, 0.2), rgba(117, 19, 93, 0.64));
+        opacity: .5;
+    }
+    .content {
+        color: $whiteColor;
+        z-index: 4;
+        text-align: center;
+        h1{
+            font-size: 120px;
+            font-family: $freeHandFont;
+            @media (max-width: 767.98px){
+                font-size: 100px;
+            }
+            @media (max-width: 576px) { 
+                font-size: 70px;
+            }
+            @media (max-width: 200px) { 
+                font-size: 60px;
+            }
+        }
+    }
+}
+// End Home Main Img
+
+// Start About Section 
+.aboutSection {
+    margin-top: $SectionMargin;
+    .container {
+        .content {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px 70px;
+            @media (max-width: 767.98px){
+                grid-template-columns: repeat(1, 1fr); 
+            }
+            .About-img {
+                width: 100%;
+                height: 580px;
+                text-align: center;
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+                overflow: hidden;
+                border-radius: 5px;
+                @media (max-width: 1200px) { 
+                    max-height: 510px;
+                }
+                @media (max-width: 991.98px) {
+                    max-height: 480px;
+                }
+                @media (max-width: 767.98px){
+                max-height: 450px;        
+                }
+                @media (max-width: 576px) { 
+                    max-height: 440px;   
+                }
+                @media (max-width: 326px) { 
+                    max-height: 240px;   
+                }
+                @media (max-width: 186px) { 
+                    max-height: 140px;   
+                }
+
+                img {
+                    width: 100%;
+                    display:block;
+                    margin-top:-150px;
+                    transition: all .3s ease-in-out;
+                    cursor: pointer;
+                    &:hover {
+                        transform: scale(1.2);
+                    }
+                    @media (max-width: 991.98px) {
+                        margin-top: 0px;
+                        // max-height: ;
+                    }
+                    @media (max-width: 767.98px){
+                        margin-top: 0px;
+                        }
+                }
+            }
+            .info {
+                h1 {
+                    margin-bottom: 10px;
+                }
+                p {
+                    line-height: $MainLineHeight;
+                    color: $textcolorGray;
+                    margin-bottom: 30px;
+                }
+                .follow {
+                    h3 {
+                        margin-bottom: 20px;
+                        margin-top: 60px;
+                        color: $textcolorGray;
+                    }
+                    a {
+                        i {
+                            margin-right: 20px;
+                            margin-bottom: 20px;
+                            color: #a7a7a7;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// End About Section 

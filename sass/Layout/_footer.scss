@@ -1,0 +1,76 @@
+footer {
+    margin-top: $SectionMargin;
+    background-color: #333333;
+    color: $whiteColor;
+    padding: 80px 0px;
+    .container {
+        .mainContent {
+            display: grid;
+            
+            grid-template-columns: repeat( 3, 1fr);
+            grid-template-rows: auto;
+
+            grid-template-areas: "section-1 section-2 section-3";
+            gap: 40px;
+            @media  (max-width: 576px) {
+                grid-template-areas:
+                    "section-1 section-1 section-1"
+                    "section-2 section-3 section-3"
+                    "section-2 section-3 section-3"
+            }
+            @media  (max-width: 230px) {
+                grid-template-areas:
+                    "section-1 section-1 section-1"
+                    "section-2 section-2 section-2"
+                    "section-3 section-3 section-3"
+            }
+          
+          
+            .content1 {
+                color: $textcolorGray;
+                grid-area: section-1;
+                width: 100%;
+                h3 {
+                    margin-bottom: 25px;
+                    color: $whiteColor;
+                }
+                p {
+                    line-height: $MainLineHeight;
+                    font-size: 15px;
+                }
+            }
+            .content2 {
+                grid-area: section-2;
+                width: 100%;
+                h3 {
+                    margin-bottom: 25px;
+                    color: $whiteColor;
+                }
+                ul {
+                    li {
+                        margin-bottom: 15px;
+                        a{
+                            color: $textcolorGray;
+                        }
+                        &:last-child {
+                            margin-bottom: 0px;
+                        }
+                    }
+                }
+            }
+            .content3 {
+                grid-area: section-3;
+                width: 100%;
+                h3 {
+                    margin-bottom: 25px;
+                    color: $whiteColor;
+                }
+                i {
+                    margin-right: 20px;
+                    margin-bottom: 20px;
+                    color: #a7a7a7;
+                }
+            }
+        }
+    }
+}

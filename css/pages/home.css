@@ -1,0 +1,462 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Varela+Round&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Varela+Round&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Varela+Round&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Varela+Round&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Varela+Round&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0px auto;
+  padding: 0px;
+  font-family: "Varela Round", sans-serif; }
+
+body {
+  overflow-x: hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html {
+  -o-scroll-behavior: smooth;
+  -ms-scroll-behavior: smooth;
+  -webkit-scroll-behavior: smooth;
+  -moz-scroll-behavior: smooth;
+  scroll-behavior: smooth;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+::selection {
+  background-color: black;
+  color: white; }
+
+a {
+  text-decoration: none;
+  padding: 0px;
+  margin: 0px; }
+
+ul {
+  list-style: none; }
+
+.Specialties h1, .MyPhotography .container h1 {
+  text-align: center;
+  font-size: 38px;
+  margin-bottom: 70px;
+  color: black;
+  position: relative; }
+  .Specialties h1::after, .MyPhotography .container h1::after {
+    content: "";
+    position: absolute;
+    width: 10%;
+    bottom: -10px;
+    left: 0;
+    border-bottom: 2px solid black;
+    right: 0;
+    margin: 0 auto; }
+  @media (max-width: 576px) {
+    .Specialties h1, .MyPhotography .container h1 {
+      font-size: 30px; } }
+
+.container {
+  margin: 0px auto;
+  overflow: hidden; }
+  @media (max-width: 576px) {
+    .container {
+      width: 100%;
+      padding: 0px 14px; } }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    .container {
+      width: 540px; } }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    .container {
+      width: 720px; } }
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    .container {
+      width: 960px; } }
+  @media (min-width: 1200px) {
+    .container {
+      width: 1140px; } }
+
+.HomeMainImg .content a {
+  background-color: #67bbb2;
+  color: white;
+  padding: 10px 30px;
+  border-radius: 20px;
+  font-size: 18px;
+  margin-top: 20px; }
+
+header {
+  background-color: white;
+  padding: 24px 0px;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px; }
+  header .container {
+    overflow: visible; }
+    header .container .content {
+      z-index: 8888;
+      display: flex;
+      justify-content: space- space-between;
+      align-items: center; }
+      header .container .content .logo {
+        flex-grow: 1; }
+        header .container .content .logo a {
+          color: #080826; }
+          header .container .content .logo a h1 {
+            font-family: "Dancing Script", cursive;
+            display: inline-block; }
+      header .container .content nav {
+        flex-grow: 1;
+        position: relative; }
+        @media (max-width: 767.98px) {
+          header .container .content nav {
+            flex-grow: 0; } }
+        header .container .content nav input {
+          display: none; }
+          @media (max-width: 767.98px) {
+            header .container .content nav input:checked ~ ul {
+              display: block; } }
+        header .container .content nav label {
+          display: none; }
+          @media (max-width: 767.98px) {
+            header .container .content nav label {
+              display: block;
+              font-size: 24px; } }
+        header .container .content nav ul {
+          display: flex;
+          justify-content: space-between;
+          flex-direction: row;
+          z-index: 9; }
+          @media (max-width: 767.98px) {
+            header .container .content nav ul {
+              flex-direction: column;
+              align-items: flex-start;
+              position: absolute;
+              top: 57px;
+              right: -10px;
+              background-color: #f6f6f6;
+              min-width: auto;
+              display: none; }
+              header .container .content nav ul::before {
+                content: "";
+                border-width: 10px;
+                border-style: solid;
+                border-color: transparent transparent #f6f6f6 transparent;
+                position: absolute;
+                top: -20px;
+                right: 10px;
+                z-index: 9999; } }
+          @media (max-width: 767.98px) {
+            header .container .content nav ul li {
+              min-width: 200px; } }
+          header .container .content nav ul li a {
+            color: #333; }
+            @media (max-width: 767.98px) {
+              header .container .content nav ul li a {
+                border-bottom: 1px solid #ddd;
+                padding: 15px;
+                width: 100%;
+                display: block; }
+                header .container .content nav ul li a:not(:last-child) {
+                  border-bottom: none; }
+                header .container .content nav ul li a:hover {
+                  transition: padding-left .3s ease-in-out;
+                  padding-left: 30px; } }
+
+footer {
+  margin-top: 80px;
+  background-color: #333333;
+  color: white;
+  padding: 80px 0px; }
+  footer .container .mainContent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: "section-1 section-2 section-3";
+    gap: 40px; }
+    @media (max-width: 576px) {
+      footer .container .mainContent {
+        grid-template-areas: "section-1 section-1 section-1" "section-2 section-3 section-3" "section-2 section-3 section-3"; } }
+    @media (max-width: 230px) {
+      footer .container .mainContent {
+        grid-template-areas: "section-1 section-1 section-1" "section-2 section-2 section-2" "section-3 section-3 section-3"; } }
+    footer .container .mainContent .content1 {
+      color: #a7a7a7;
+      grid-area: section-1;
+      width: 100%; }
+      footer .container .mainContent .content1 h3 {
+        margin-bottom: 25px;
+        color: white; }
+      footer .container .mainContent .content1 p {
+        line-height: 1.7;
+        font-size: 15px; }
+    footer .container .mainContent .content2 {
+      grid-area: section-2;
+      width: 100%; }
+      footer .container .mainContent .content2 h3 {
+        margin-bottom: 25px;
+        color: white; }
+      footer .container .mainContent .content2 ul li {
+        margin-bottom: 15px; }
+        footer .container .mainContent .content2 ul li a {
+          color: #a7a7a7; }
+        footer .container .mainContent .content2 ul li:last-child {
+          margin-bottom: 0px; }
+    footer .container .mainContent .content3 {
+      grid-area: section-3;
+      width: 100%; }
+      footer .container .mainContent .content3 h3 {
+        margin-bottom: 25px;
+        color: white; }
+      footer .container .mainContent .content3 i {
+        margin-right: 20px;
+        margin-bottom: 20px;
+        color: #a7a7a7; }
+
+.needPHotography {
+  margin-top: 80px; }
+  .needPHotography .container {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-evenly; }
+    @media (max-width: 991.98px) {
+      .needPHotography .container {
+        flex-direction: column;
+        text-align: center; } }
+    .needPHotography .container h1 {
+      margin: 10px 0px;
+      display: inline-block;
+      max-width: fit-content; }
+      @media (max-width: 576px) {
+        .needPHotography .container h1 {
+          font-size: 28px; } }
+    .needPHotography .container a {
+      background-color: #7971ea;
+      border-color: #7971ea;
+      border-radius: 0px;
+      padding: 15px 25px;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      transition: all .2s ease-in-out;
+      cursor: pointer;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      max-width: fit-content; }
+      .needPHotography .container a:hover {
+        background-color: #4d45c5; }
+
+.HomeMainImg {
+  min-width: auto;
+  min-height: calc(100vh - 87px);
+  overflow: hidden;
+  position: relative;
+  background-image: url("../../imgs/jeremy-bishop-dRltIJMupdc-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .HomeMainImg .container
+  .overlay {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(245, 246, 252, 0.2), rgba(117, 19, 93, 0.64));
+    opacity: .5; }
+  .HomeMainImg .content {
+    color: white;
+    z-index: 4;
+    text-align: center; }
+    .HomeMainImg .content h1 {
+      font-size: 120px;
+      font-family: "Dancing Script", cursive; }
+      @media (max-width: 767.98px) {
+        .HomeMainImg .content h1 {
+          font-size: 100px; } }
+      @media (max-width: 576px) {
+        .HomeMainImg .content h1 {
+          font-size: 70px; } }
+    .HomeMainImg .content p {
+      font-size: 28px;
+      letter-spacing: 4px; }
+      @media (max-width: 767.98px) {
+        .HomeMainImg .content p {
+          font-size: 26px; } }
+      @media (max-width: 576px) {
+        .HomeMainImg .content p {
+          font-size: 22px; } }
+    .HomeMainImg .content a {
+      display: inline-block;
+      -ms-transition: all 0.2s ease-in-out;
+      -o-transition: all 0.2s ease-in-out;
+      -moz-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+      margin-left: 8px;
+      margin-right: 8px; }
+      .HomeMainImg .content a:hover {
+        background-color: #55a89f; }
+      .HomeMainImg .content a:last-child {
+        background-color: #ff166c; }
+      .HomeMainImg .content a:last-child:hover {
+        background-color: #cd0e55; }
+
+.Specialties {
+  text-align: center; }
+  .Specialties .small-img {
+    position: absolute;
+    top: calc(100vh - 100px);
+    left: calc(50% - 100px);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden; }
+    @media (max-width: 576px) {
+      .Specialties .small-img {
+        top: calc(100vh - (150px/2));
+        left: calc(50% - (150px/2));
+        width: 150px;
+        height: 150px; } }
+    .Specialties .small-img img {
+      width: 100%;
+      height: 100%; }
+  .Specialties h1 {
+    margin-top: 160px; }
+  .Specialties .container .cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+    .Specialties .container .cards .card {
+      display: flex;
+      flex-direction: row;
+      width: 48%;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+      margin-bottom: 20px;
+      overflow: hidden;
+      border-radius: 8px;
+      background-color: white; }
+      @media (max-width: 991.98px) {
+        .Specialties .container .cards .card {
+          width: 80%; } }
+      @media (max-width: 1199.98px) {
+        .Specialties .container .cards .card {
+          flex-direction: column; } }
+      .Specialties .container .cards .card .card-img {
+        max-width: 50%;
+        max-height: 250px; }
+        @media (max-width: 1199.98px) {
+          .Specialties .container .cards .card .card-img {
+            max-width: 100%;
+            max-height: 600px; } }
+        .Specialties .container .cards .card .card-img img {
+          width: 100%; }
+          @media (max-width: 1199.98px) {
+            .Specialties .container .cards .card .card-img img {
+              height: 100%;
+              width: 100%; } }
+      .Specialties .container .cards .card .content {
+        text-align: left;
+        padding: 30px 25px; }
+        .Specialties .container .cards .card .content h3 {
+          margin-bottom: 20px; }
+        .Specialties .container .cards .card .content p {
+          color: #4d4d4d;
+          line-height: 1.6; }
+
+.photographerInfo {
+  background-image: url("../../imgs/d195.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 80px 0px;
+  margin-top: 80px; }
+  .photographerInfo .container .imgContainer {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 18px; }
+    .photographerInfo .container .imgContainer img {
+      width: 100%;
+      height: 100%; }
+  .photographerInfo .container p {
+    width: 70%;
+    text-align: center;
+    color: white;
+    line-height: 1.6;
+    font-size: 22px; }
+    @media (max-width: 767.98px) {
+      .photographerInfo .container p {
+        width: 100%; } }
+
+.MyPhotography {
+  margin-top: 80px; }
+
+.MyPhotography .container .photographyCards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 80px; }
+  .MyPhotography .container .photographyCards .card {
+    width: 330px;
+    min-height: 330px;
+    margin: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    cursor: pointer; }
+    @media (max-width: 1200px) {
+      .MyPhotography .container .photographyCards .card {
+        width: calc((100% /2) - 40px);
+        min-height: 400px; } }
+    @media (max-width: 991.98px) {
+      .MyPhotography .container .photographyCards .card {
+        width: 80%;
+        min-height: 500px; } }
+    @media (max-width: 767.98px) {
+      .MyPhotography .container .photographyCards .card {
+        min-height: 400px; } }
+    @media (max-width: 576px) {
+      .MyPhotography .container .photographyCards .card {
+        min-width: 80%;
+        min-height: 400px; } }
+    .MyPhotography .container .photographyCards .card:hover img {
+      transform: scale(1.2); }
+    .MyPhotography .container .photographyCards .card img {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      width: 100%;
+      z-index: 1;
+      transition: all .4s ease-in-out;
+      min-width: 300px;
+      min-height: 300px; }
+    .MyPhotography .container .photographyCards .card .overlay {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, transparent 0%, transparent 18%, rgba(0, 0, 0, 0.8) 99%, rgba(0, 0, 0, 0.8) 100%);
+      opacity: .5;
+      z-index: 2; }
+    .MyPhotography .container .photographyCards .card .content {
+      z-index: 3; }
+      .MyPhotography .container .photographyCards .card .content h3 {
+        font-size: 22px;
+        font-weight: 300; }
+      .MyPhotography .container .photographyCards .card .content p {
+        font-size: 14px; }
+
+/*# sourceMappingURL=home.css.map */

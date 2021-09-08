@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Varela+Round&display=swap');
+@import "../helpers/mixins";
+@import "../helpers/variables";
+* {
+    @include prefix (box-sizing, border-box, webkit moz );
+    margin: 0px auto;
+    padding: 0px;
+    font-family: $simpleFont;
+}
+body {
+    overflow-x: hidden;
+    @include prefix (box-sizing, border-box, webkit moz );
+}
+html {
+    @include prefix(scroll-behavior, smooth, o ms webkit moz);
+    @include prefix (box-sizing, border-box, webkit moz );
+}
+
+::selection {
+    background-color: $blackcolor;
+    color: $whiteColor;
+}
+a {
+    text-decoration: none;
+    padding: 0px;
+    margin: 0px;
+}
+ul {
+    list-style: none
+}
+
+%headingSection {
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 70px;
+    color: $blackcolor;
+    position: relative;
+    &::after {
+    content: "";
+    position: absolute;
+    width: 10%;
+    bottom: -10px;
+    left: 0;
+    border-bottom: 2px solid $blackcolor;
+    right: 0;
+    margin: 0 auto;
+   
+    }
+    @media (max-width: 576px) { 
+        font-size: 30px;
+    }
+}

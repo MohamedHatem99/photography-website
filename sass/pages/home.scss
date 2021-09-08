@@ -1,0 +1,275 @@
+@import "../helpers/global";
+@import "../helpers/mixins";
+@import "../helpers/grid";
+@import "../Componets/buttons";
+@import "../Layout/header";
+@import "../Layout/footer";
+@import "../helpers/variables";
+@import "../Layout/needPhotographyBeforeFooter";
+
+
+// Start Home Main Img
+.HomeMainImg {
+    min-width: auto;
+    min-height: calc(100vh - 87px);
+    overflow: hidden;
+    position: relative;
+    background-image: url("../../imgs/jeremy-bishop-dRltIJMupdc-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .container 
+    .overlay {
+        @include overlay;
+        background:linear-gradient(to bottom, rgba(245, 246, 252, 0.2), rgba(117, 19, 93, 0.64));
+        opacity: .5;
+    }
+    .content {
+        color: $whiteColor;
+        z-index: 4;
+        text-align: center;
+        h1{
+            font-size: 120px;
+            font-family: $freeHandFont;
+            @media (max-width: 767.98px){
+                font-size: 100px;
+            }
+            @media (max-width: 576px) { 
+                font-size: 70px;
+            }
+        }
+        p {
+            font-size: 28px;
+            letter-spacing: 4px;
+            @media (max-width: 767.98px){
+                font-size: 26px;
+            }
+            @media (max-width: 576px) { 
+                font-size: 22px;
+            }
+        }
+        a {
+            @extend %MainLinkBtn;
+            display: inline-block;
+            @include prefix( transition, all .2s ease-in-out, ms o moz );
+            margin-left: 8px;
+            margin-right: 8px;
+            &:hover {
+                background-color: $darkGreenColor;
+            }
+            &:last-child {
+                background-color: $pinkColor;
+            }
+            &:last-child:hover {
+                background-color: $darkPinkColor;
+            }
+        }
+    }
+}
+
+// End Home Main Img
+
+// Start Specialties
+.Specialties {
+    text-align: center;
+    .small-img {
+        position: absolute;
+        top: calc(100vh - 100px);
+        left: calc(50% - 100px);
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        overflow: hidden;
+        @media (max-width: 576px) { 
+            top: calc(100vh - (150px/2));
+        left: calc(50% - (150px/2));
+        width: 150px;
+        height: 150px;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    h1 {
+        @extend %headingSection;
+        margin-top: $SectionMargin + 80px;
+        
+    }
+    .container {
+        .cards{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            .card {     
+                display: flex;
+                flex-direction: row;   
+                width: 48%;
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+                margin-bottom: 20px;
+                overflow: hidden;
+                border-radius: 8px;
+                background-color: $whiteColor;
+                @media (max-width: 991.98px) { 
+                    width: 80%;
+                }
+                @media (max-width: 1199.98px) { 
+                    flex-direction: column;
+                    // height: auto;
+                }
+                .card-img {
+                    max-width: 50%;
+                    max-height: 250px;
+                    @media(max-width: 1199.98px) { 
+                        max-width: 100%;
+                        max-height:600px;
+                    }
+                    img {
+                        width: 100%;
+                        @media (max-width: 1199.98px) { 
+                        height: 100%;
+                        width: 100%;
+                        }
+                    }
+                }
+                .content {
+                    text-align: left;
+                    padding: 30px 25px;
+                    h3 {
+                        margin-bottom: 20px;
+                    }
+                    p {
+                        color: #4d4d4d;
+                        line-height: $MainLineHeight;
+                    }
+                }
+            }
+        }
+    }   
+}
+// End Specialties
+
+// Start photographerInfo
+.photographerInfo {
+    background-image: url("../../imgs/d195.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 80px 0px;
+    margin-top: $SectionMargin;
+    .container {
+        .imgContainer {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-bottom: 18px;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        p {
+            width: 70%;
+            text-align: center;
+            color: $whiteColor;
+            line-height: $MainLineHeight;
+            font-size: 22px;
+            @media (max-width: 767.98px) {
+                width: 100%;
+            }
+        }
+    }
+}
+// End photographerInfo.
+
+// Start MyPhotography
+.MyPhotography {
+    margin-top: $SectionMargin;
+    .container {
+        h1 {
+            @extend %headingSection;
+        }
+    }
+}
+// End MyPhotography
+
+// Start My Photography 
+$dse: 100%;
+.MyPhotography {
+    .container {
+        h1 {}
+        .photographyCards {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-bottom: $SectionMargin;
+            .card {
+                width: 330px;
+                min-height: 330px;
+                margin: 20px;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                color: $whiteColor;
+                overflow: hidden;
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+                cursor: pointer;
+                @media (max-width: 1200px) {
+                    width: calc((100% /2) - 40px);
+                    min-height: 400px;
+                }
+                @media (max-width: 991.98px) {
+                    width: 80%;
+                    min-height: 500px;
+                } 
+                @media (max-width: 767.98px) { 
+                    min-height: 400px;
+                }
+                @media (max-width: 576px) { 
+                min-width: 80%;
+                min-height: 400px;
+                }
+                &:hover {
+                    img {
+                        transform: scale(1.2);
+                    }
+                }
+                img {
+                    @include overlay;
+                    width: 100%;
+                    z-index: 1;
+                    transition: all .4s ease-in-out;
+                    min-width: 300px;
+                    min-height: 300px                }
+                .overlay {
+                    @include overlay;
+                    background:linear-gradient(to bottom,transparent 0%,transparent 18%,rgba(0,0,0,.8) 99%,rgba(0,0,0,.8) 100%);
+                    opacity: .5;
+                    z-index: 2;
+                }
+               .content {
+                   z-index: 3;
+                    h3 {
+                        font-size: 22px;
+                        font-weight: 300;
+                    }
+                    p {
+                        font-size: 14px;
+                    }
+               }
+             
+            }
+        }
+    }
+}
+//  End My Photography
+
+// Start needPHotography
+    //  *** this style is useaple to edit this style go to 'Layout/_needPhotoBeforeFooter.scss' *** 
+// End needPHotography
